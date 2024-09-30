@@ -1,0 +1,48 @@
+<div class ="all" style="padding: 19%" >
+
+    <div class="container mt-5">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center">We'd love to hear from you! Please fill out the form below:</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name"placeholder="Enter Name" [(ngModel)]="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" [(ngModel)]="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter subject" [(ngModel)]="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your message here..."[(ngModel)]="message" name="message"  required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"(click)="sendMessage()">Send Message</button>
+                </form>
+                <div *ngIf="submitted" class="alert alert-success mt-3" role="alert">
+                    Message has been sent successfully!
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h4>Contact Information</h4>
+                <p><strong>Email:</strong> support.com</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Address:</strong> 123 Main St, Anytown, USA</p>
+                <h5>Follow Us</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#" class="btn btn-outline-secondary">Facebook</a></li>
+                    <li class="list-inline-item"><a href="#" class="btn btn-outline-secondary">Twitter</a></li>
+                    <li class="list-inline-item"><a href="#" class="btn btn-outline-secondary">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

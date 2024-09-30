@@ -1,0 +1,38 @@
+<div class ="all" style="padding: 19%;background-origin: padding-box;">
+    <br>
+    <h1 style="height: fit-content; text-decoration: solid; color: blue; text-shadow: 5cqi;">Tasks application </h1>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-3">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter" aria-label="Enter task"
+              aria-describedby="basic-addon2" [(ngModel)]="newTask">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary btn-primary" type="button" if="button-addon2" style="color: aqua;"
+                (click)="saveTask()">Add task</button>
+            </div>
+            <br>
+          </div>
+          <table class="table-striped">
+            <tbody>
+              <tr *ngFor="let task of tasks; let i = index;">
+                <th scope="row">{{i + 1}}</th>
+                <td class="{{!task.isCompleted ? 'done' : ' '}}" (click)="done(i)">{{task.name}}</td>
+                <td>
+                  <button class="btn btn-danger btn-sm" (click)="remove(i)">
+                    <i class="bi bi-trash"></i> Delete
+                  </button>
+                </td>
+              </tr>
+              
+          </tbody>
+          <br>
+          <button class="btn btn-danger mt-3" (click)="clearAllTasks()">Clear All</button>
+          </table>
+  
+        </div>
+      </div>`
+    </div>
+  </div>

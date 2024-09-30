@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+
+
+h1{
+    text-align: center;
+}
+.done{
+text-decoration: line-through;
+}
+
+.all{
+    max-width: 20;
+   background-image: url('assets\1.jpeg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+
+  
